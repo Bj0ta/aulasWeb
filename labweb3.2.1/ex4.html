@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inverterNum(n) {
+            let inverter = 0;
+            while (n > 0) {
+                inverter = inverter * 10 + n  % 10;
+                n = ~~(n / 10);	
+            }
+            return inverter;
+        }
+        var numero = Number(prompt("Digite uma sequência de número: "));
+        alert("O número invertido é: " + inverterNum(numero));
+    </script>
+</body>
+</html>
