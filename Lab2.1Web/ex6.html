@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function vetor(indice) {
+            var x = Number(prompt(`Digite o valor de x${indice}:`));
+            var y = Number(prompt(`Digite o valor de y${indice}:`));
+            var z = Number(prompt(`Digite o valor de z${indice}:`));
+            return [x, y, z];
+        }
+    
+        var vetor1 = vetor(1);
+        var vetor2 = vetor(2);
+    
+        var P = (vetor1[0] * vetor2[0]) + (vetor1[1] * vetor2[1]) + (vetor1[2] * vetor2[2]);
+        alert(`O produto escalar dos vetores é: ${P}`);
+    </script>
+    
+</body>
+</html>
