@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+</head>
+<body>
+    <input type="text" id="preco" placeholder="Digite o preço">
+    <br><br>
+    <button onclick="compra()">Compras</button>
+    <button onclick="conversao()">Mostra</button>
+    <div id="resultado"></div>
+
+    <script>
+        let precos = [];
+        const cambio = 0.20;
+
+        function compra() {
+            let preco = document.getElementById("preco").value;
+            let valor = parseFloat(preco);
+            
+            if (!isNaN(valor)) {
+                precos.push(valor);
+                document.getElementById("preco").value = "";
+            }
+        }
+
+        function conversao() {
+            let resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = "";
+
+            if (precos.length === 0) {
+                resultadoDiv.innerHTML = "Nenhum preço cadastrado.";
+                return;
+            }
+            
+            precos.forEach(preco => {
+                let convertido = preco * Cambio;
+                resultadoDiv.innerHTML += `R$ ${preco.toFixed(2)} = $ ${convertido.toFixed(2)}<br>`;
+            });
+        }
+    </script>
+</body>
+</html>

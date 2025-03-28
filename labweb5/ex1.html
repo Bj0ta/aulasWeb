@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+
+<body>
+    <form action="exe1" id="exe1">
+        <button id="adicionar" type="button">Adicionar Nomes</button>
+    </form>
+    <article id="resultado"></article>
+    <script>
+        let btn = document.querySelector("#adicionar");
+        btn.addEventListener("click", function() {
+            let nomes = []
+            for (let i = 0; i < 10; i++) {
+                nomes[i] = prompt(`Digite o ${i + 1} nome`)
+            }
+
+            let texto = "";
+            nomes.forEach(nome => {
+                texto += nome + "<br>"; //concatena o nome com a quuebra de linha
+            });
+            document.querySelector("#resultado").innerHTML = texto;
+
+        })
+    </script>
+</body>
+
+</html>

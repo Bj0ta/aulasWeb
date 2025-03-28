@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3</title>
+</head>
+<body>
+  <form id ="formulario">
+    <input type="number" id ="valor" placeholder="Digite o valor(R$): ">
+    <br><br>
+    <input type="number" id ="taxa" placeholder="Digite a taxa de juros(%): ">
+    <br><br>
+    <input type="number" id="meses" placeholder="Digite a quantidade de meses: ">
+    <br><br>
+    <button onclick="calcular()">Calcular</button>
+  </form> 
+    <div id="resultado"></div>
+<script>
+    document.getElementById("formulario").addEventListener("submit", function(event){
+        event.preventDefault();
+    });
+    function calcular(){
+        let P = parseFloat(document.getElementById("valor").value);
+        let r = parseFloat(document.getElementById("taxa").value);
+        let n = parseFloat(document.getElementById("meses").value);
+       parcela = (P * (r/100)) / (1 - Math.pow((1 + (r/100)), -n));
+        document.getElementById("resultado").innerHTML = ` o valor total é R$ ${parcela.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>

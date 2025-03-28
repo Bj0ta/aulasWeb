@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2</title>
+    <script>
+        window.onload = function() {
+            let btn = document.querySelector("#botao");
+            let txt = document.querySelector("#texto");
+            // associa eventos ao elemento
+            btn.addEventListener("click", function(){
+                alert("oi");
+                txt.innerHTML = "<br>Mais um exemplo"
+                txt.style.backgroundColor = "yellow";
+                txt.style.widht = "150px";
+            }) 
+        }
+    </script>
+</head>
+<body>
+        <form name = "ex" id = "form">
+        <input type="button" value="Clique aqui" id="botao">
+        <article id = "texto"></article>
+    </form>
+</body>
+</html>

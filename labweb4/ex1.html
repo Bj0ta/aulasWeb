@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exeemplo 1</title>
+
+    <script>
+        window.onload = function() {
+            let btn = document.getElementById("botao");
+            btn.onclick = function(){
+                alert("oi");
+                // innerHTML é uma propriedade que permite a manipulação do conteúdo HTML de um elemento o html tem que ser em maiusculo 
+                document.getElementById("texto").innerHTML = "<strong> Exemplo com innerHTML </strong>";
+                document.getElementById("texto").style.color = "red";
+                document.getElementById("texto").style.fontSize = "13pt";
+            } 
+        }
+    </script>
+</head>
+<body>
+    <form name = "ex" id = "form">
+        <input type="button" value="Clique aqui" id="botao">
+        <article id = "texto"></article>
+    </form>
+</body>
+</html>
